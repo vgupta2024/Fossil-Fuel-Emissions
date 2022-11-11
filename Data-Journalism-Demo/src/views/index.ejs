@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Harry Potter Characters</title>
+  <meta name="author" content="You">
+  <meta name="description" content="A compendium of Harry Potter characters">
+  <meta content="text/html" http-equiv="Content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Countries</h1>
+  </header>
+  <section id="country-table">
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Year</th>
+        <th>Total Fossil Fuel Emission (million metric tons of Carbon)</th>
+      </tr>
+      <% for(country in data){ %>
+      <tr>
+        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
+        <td><%= data[country].Year %></td>
+        <td><%= data[country].TotalFossilFuelEmission %></td>
+      </tr>
+      <%}%>
+    </table>
+  </section>
+
+  <%- include ('global/footer');  %>
+
+</body>
+
+</html>
