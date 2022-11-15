@@ -3,14 +3,14 @@ const ejs = require('ejs');
 
 let country_info = JSON.parse(fs.readFileSync('../data/FossilFuelData.json', 'utf8'));
 let index_template = fs.readFileSync('views/index.ejs', 'utf8');
-let character_template = fs.readFileSync('views/character.ejs', 'utf8');
+let country_template = fs.readFileSync('views/country.ejs', 'utf8');
 
 /*
   1) Generate a web page for each character
   2) Keep track of the link for index.html
 */
 for (country in country_info){
-  let country_html = ejs.render(character_template, {
+  let country_html = ejs.render(country_template, {
     filename: __dirname + '/views/country.ejs',
     stats: country_info[country],
     name: country
