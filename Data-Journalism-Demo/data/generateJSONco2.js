@@ -35,7 +35,16 @@ eachNation.forEach(function(nat) {
     let natArr = nat.split(",");
   let nationName = natArr[1];
   let nationYear = natArr[0];
-  if (nationName == "CHINA (MAINLAND)" && nationYear == "2014" || nationName == "UNITED STATES OF AMERICA" && nationYear == "2014" || nationName == "INDIA" && nationYear == "2014" || nationName == "RUSSIAN FEDERATION" && nationYear == "2014" || nationName == "INDONESIA" && nationYear == "2014" || nationName == "JAPAN" && nationYear == "2014" || nationName == "BRAZIL" && nationYear == "2014" || nationName == "GERMANY" && nationYear =="2014" || nationName == "REPUBLIC OF KOREA" && nationYear == "2014" || nationName == "ISLAMIC REPUBLIC OF IRAN" && nationYear == "2014") {
+  if (nationName == "CHINA (MAINLAND)" && nationYear == "2014"
+  || nationName == "UNITED STATES OF AMERICA" && nationYear == "2014"
+  || nationName == "INDIA" && nationYear == "2014"
+  || nationName == "RUSSIAN FEDERATION" && nationYear == "2014"
+  || nationName == "INDONESIA" && nationYear == "2014"
+  || nationName == "JAPAN" && nationYear == "2014"
+  || nationName == "BRAZIL" && nationYear == "2014"
+  || nationName == "GERMANY" && nationYear =="2014"
+  || nationName == "REPUBLIC OF KOREA" && nationYear == "2014"
+  || nationName == "ISLAMIC REPUBLIC OF IRAN" && nationYear == "2014") {
     let objectNation = {};
     objectNation["Year"] = natArr[0];
     objectNation["TotalFossilFuelEmission"] = natArr[2];
