@@ -5,6 +5,7 @@ let nations = {};
 let nations_csv = fs.readFileSync("fossil-fuel-co2-emissions-by-nation.csv", "utf8");
 
 let eachNation = nations_csv.split("\n");
+/*
 let topTen = ["0,0,0" , "0,0,0" , "0,0,0" , "0,0,0" , "0,0,0" , "0,0,0" , "0,0,0" , "0,0,0" , "0,0,0" , "0,0,0"];
 eachNation.forEach(function(nat) {
   let natArr0 = topTen[0].split(",");
@@ -14,7 +15,7 @@ eachNation.forEach(function(nat) {
     let natArray = nat.split(",");
     if(Number(natArray[2])>smallest && index >=0){
       topTen[i] = nat;
-      console.log(nat);
+      console.log(nat)
     }
     index = 0;
     let natArr = topTen[i].split(",");
@@ -27,11 +28,14 @@ eachNation.forEach(function(nat) {
   }
 });
   console.log(topTen);
-/*
-for(let i = 0; i < topTen.length; i++){
-  let natArr = topTen[i].split(",");
+  */
+
+
+  eachNation.forEach(function(nat) {
+    let natArr = nat.split(",");
   let nationName = natArr[1];
-  if (nationName != "Country" && natArr.length == 10) {
+  let nationYear = natArr[0];
+  if (nationName == "CHINA (MAINLAND)" && nationYear == "2014" || nationName == "UNITED STATES OF AMERICA" && nationYear == "2014" || nationName == "INDIA" && nationYear == "2014" || nationName == "RUSSIAN FEDERATION" && nationYear == "2014" || nationName == "INDONESIA" && nationYear == "2014" || nationName == "JAPAN" && nationYear == "2014" || nationName == "BRAZIL" && nationYear == "2014" || nationName == "GERMANY" && nationYear =="2014" || nationName == "REPUBLIC OF KOREA" && nationYear == "2014" || nationName == "ISLAMIC REPUBLIC OF IRAN" && nationYear == "2014") {
     let objectNation = {};
     objectNation["Year"] = natArr[0];
     objectNation["TotalFossilFuelEmission"] = natArr[2];
@@ -39,10 +43,9 @@ for(let i = 0; i < topTen.length; i++){
     objectNation["LiquidFuelEmission"] = natArr[4];
     objectNation["GasFuelEmission"] = natArr[5];
     nations[nationName] = objectNation;
-    console.log(nations[nationName][0]);
   }
-}
-*/
+});
+
 
 
 fs.writeFileSync("FossilFuelData.json", JSON.stringify(nations), "utf8");
