@@ -1,1 +1,72 @@
-{}
+{
+  "BRAZIL": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "144480",
+    "SolidFuelEmission": "20089",
+    "LiquidFuelEmission": "92454",
+    "GasFuelEmission": "21297"
+  },
+  "CHINA (MAINLAND)": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "2806634",
+    "SolidFuelEmission": "2026492",
+    "LiquidFuelEmission": "344725",
+    "GasFuelEmission": "96504"
+  },
+  "GERMANY": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "196314",
+    "SolidFuelEmission": "84098",
+    "LiquidFuelEmission": "68263",
+    "GasFuelEmission": "39582"
+  },
+  "INDIA": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "610411",
+    "SolidFuelEmission": "407077",
+    "LiquidFuelEmission": "140199",
+    "GasFuelEmission": "25278"
+  },
+  "INDONESIA": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "126582",
+    "SolidFuelEmission": "33370",
+    "LiquidFuelEmission": "63677",
+    "GasFuelEmission": "17035"
+  },
+  "ISLAMIC REPUBLIC OF IRAN": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "177115",
+    "SolidFuelEmission": "900",
+    "LiquidFuelEmission": "66662",
+    "GasFuelEmission": "91127"
+  },
+  "JAPAN": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "331074",
+    "SolidFuelEmission": "122461",
+    "LiquidFuelEmission": "133395",
+    "GasFuelEmission": "67342"
+  },
+  "REPUBLIC OF KOREA": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "160119",
+    "SolidFuelEmission": "84161",
+    "LiquidFuelEmission": "42616",
+    "GasFuelEmission": "26942"
+  },
+  "RUSSIAN FEDERATION": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "465052",
+    "SolidFuelEmission": "110403",
+    "LiquidFuelEmission": "107368",
+    "GasFuelEmission": "232204"
+  },
+  "UNITED STATES OF AMERICA": {
+    "Year": "2014",
+    "TotalFossilFuelEmission": "1432855",
+    "SolidFuelEmission": "450047",
+    "LiquidFuelEmission": "576531",
+    "GasFuelEmission": "390719"
+  }
+}
