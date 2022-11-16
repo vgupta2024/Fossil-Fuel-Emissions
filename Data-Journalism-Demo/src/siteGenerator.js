@@ -13,7 +13,8 @@ for (country in country_info){
   let country_html = ejs.render(country_template, {
     filename: __dirname + '/views/country.ejs',
     stats: country_info[country],
-    name: country
+    name: country,
+    data: country_info
   });
   country_info[country].link = getBetterFileName(country);
   fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
