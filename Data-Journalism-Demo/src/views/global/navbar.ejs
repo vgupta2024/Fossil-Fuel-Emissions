@@ -11,7 +11,7 @@
 Countries
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-  <% for(country in data){ %>
+  <% for(let country in data){ %>
     <li><a class="dropdown-item" href="<%=data[country].link%>.html"><%= country %> </a></li>
     <%}%>
   </ul>

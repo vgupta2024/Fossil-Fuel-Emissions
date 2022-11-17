@@ -9,17 +9,25 @@ let country_template = fs.readFileSync('views/country.ejs', 'utf8');
   1) Generate a web page for each character
   2) Keep track of the link for index.html
 */
+let lnk = [0,0,0,0,0,0,0,0,0,0];
+let runThru = 0;
+let cntry = country_info;
 for (country in country_info){
-  let country_html = ejs.render(country_template, {
+  country_info[country].link = getBetterFileName(country);
+   lnk[runThru] = country_info[country].link;
+  runThru += 1;
+}
+let cntries = 0;
+for (country in country_info){
+ country_html = ejs.render(country_template, {
     filename: __dirname + '/views/country.ejs',
     stats: country_info[country],
     name: country,
-    data: country_info
+    data: cntry
   });
-  country_info[country].link = getBetterFileName(country);
-  console.log(country);
-  fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
-
+  console.log(cntry);
+fs.writeFileSync('../public/'+lnk[cntries]+'.html', country_html, 'utf8');
+cntries +=1;
 }
 
 /*
