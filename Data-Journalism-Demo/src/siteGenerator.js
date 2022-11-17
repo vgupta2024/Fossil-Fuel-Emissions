@@ -17,6 +17,7 @@ for (country in country_info){
     data: country_info
   });
   country_info[country].link = getBetterFileName(country);
+  console.log(country);
   fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
 
 }
