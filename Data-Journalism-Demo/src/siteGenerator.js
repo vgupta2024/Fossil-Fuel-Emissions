@@ -43,6 +43,7 @@ fs.writeFileSync('../public/index.html', index_html, 'utf8');
 
 let about_html = ejs.render(about_template, {
   filename: __dirname + '/views/about.ejs',
+  data: country_info
 });
 
 fs.writeFileSync('../public/about.html', about_html, 'utf8');
