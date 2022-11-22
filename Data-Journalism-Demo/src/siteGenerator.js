@@ -21,7 +21,7 @@ for (country in country_info){
 let cntries = 0;
 for (country in country_info){
  country_html = ejs.render(country_template, {
-    filename: __dirname + '/views/country.ejs',
+  filename: __dirname + '/views/country.ejs',
     stats: country_info[country],
     name: country,
     data: cntry
