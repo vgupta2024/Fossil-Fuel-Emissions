@@ -20,17 +20,9 @@
   <h2>Stats</h2>
   <ul>
     <li>Total Fossil Fuel Emission: <%=stats.TotalFossilFuelEmission%></li>
-    <li>House: <%=stats.house%></li>
-    <li>Species: <%=stats.species%></li>
-    <li>Skill:
-      <% if (stats.skills && stats.skills.length > 0){ %>
-      <ol>
-        <% stats.skills.forEach(function(skill){%>
-        <li> <%=skill%></li>
-        <%}) %>
-      </ol>
-      <%}%>
-    </li>
+    <li>Solid Fuel: <%=stats.SolidFuelEmission%></li>
+    <li>Gas Fuel: <%=stats.GasFuelEmission%> </li>
+    <li>Liquid Fuel: <%=stats.LiquidFuelEmission%></li>
   </ul>
   </section>
 
