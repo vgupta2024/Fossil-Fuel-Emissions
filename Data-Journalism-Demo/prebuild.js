@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var oldPathVarunMicro = 'Varun_Design_Micro.jpg';
+var oldPathVarunMicro = 'src/Varun_Design_Micro.jpg';
 var newPathVarunMicro = 'public/Varun_Design_Micro.jpg'
 
 if (fs.existsSync(oldPathVarunMicro)) {
@@ -9,7 +9,7 @@ fs.rename(oldPathVarunMicro, newPathVarunMicro, function (err) {
 });
 }
 
-var oldPathVarunMacro = 'Varun_Design_Macro.jpg';
+var oldPathVarunMacro = 'src/Varun_Design_Macro.jpg';
 var newPathVarunMacro = 'public/Varun_Design_Macro.jpg'
 
 if (fs.existsSync(oldPathVarunMacro)) {
@@ -18,7 +18,7 @@ fs.rename(oldPathVarunMacro, newPathVarunMacro, function (err) {
 });
 }
 
-var oldPathJames = 'James_Design.jpg';
+var oldPathJames = 'src/James_Design.jpg';
 var newPathJames = 'public/James_Design.jpg'
 
 if (fs.existsSync(oldPathJames)) {
