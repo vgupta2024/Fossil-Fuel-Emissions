@@ -9,6 +9,7 @@
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
   <%- include ('global/navbar', {data:data});  %>
 </head>
 
@@ -28,6 +29,34 @@
     <li>Liquid Fuel: <%=stats.LiquidFuelEmission%></li>
   </ul>
   </section>
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+  var data = [
+  {
+    x: ["Solid Fuel Emission", "Gas Fuel Emission", "Liquid Fuel Emission"],
+    y: [<%=stats.SolidFuelEmission%>, <%=stats.GasFuelEmission%>, <%=stats.LiquidFuelEmission%>],
+    type: "bar"
+  }
+];
+var layout = {
+  title: "<%=name%>'s Fossil Fuel Emission in 2014",
+  xaxis: {tickfont: {
+      size: 14,
+      color: "rgb(107, 107, 107)"
+    }},
+  yaxis: {
+    title: "Metric Tons of Fossil Fuel",
+    titlefont: {
+      size: 16,
+      color: "rgb(107, 107, 107)"
+    }
+  }
+}
+var graphOptions = {filename: "basic-bar", fileopt: "overwrite"};
+Plotly.newPlot('myPlot', data, layout);
+</script>
 
   <%- include ('global/footer');  %>
 
