@@ -27,7 +27,7 @@ for (country in country_info){
     name: country,
     data: cntry
   });
-  console.log(cntry);
+  
 fs.writeFileSync('../public/'+lnk[cntries]+'.html', country_html, 'utf8');
 cntries +=1;
 }

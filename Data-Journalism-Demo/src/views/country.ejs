@@ -9,10 +9,13 @@
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
+  <%- include ('global/navbar', {data:data});  %>
 </head>
 
 <body>
-  <%- include ('global/navbar', {data:data});  %>
+  <span class="border border-3"></span>
+  <div class="p-4">
+
   <header>
     <h1><%=name%></h1>
   </header>
