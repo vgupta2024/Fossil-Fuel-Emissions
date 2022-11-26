@@ -46,9 +46,9 @@
   <script>
   var data = [{
   type: "choroplethmapbox",
-  geojson: "custom.geo.json",
-  locations: [ "Chinda", "United States", "India", "RUSSIAN FEDERATION",
-  "INDONESIA", "JAPAN", "BRAZIL", "GERMANY", "REPUBLIC OF KOREA", "ISLAMIC REPUBLIC OF IRAN"],
+  geojson: "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json",
+  locations: [ "CHN", "USA", "IND", "RUS",
+  "IDN", "JPN", "BRA", "DEU", "KOR", "IRN"],
   z: [144480, 2806634, 196314, 610411, 126582, 177115, 331074, 160119, 465052, 1432855],
   zmin: 100000, zmax: 500000, colorbar: {y: 0, yanchor: "bottom", title: {text: "Countries", side: "right"}}
 }];
@@ -60,7 +60,6 @@ var config = {mapboxAccessToken: "pk.eyJ1IjoianRyYWM1MiIsImEiOiJjbGF5MW9yYWIwaXh
 
 Plotly.newPlot('myPlot', data, layout, config);
   </script>
-
 
   <%- include ('global/footer');  %>
 
