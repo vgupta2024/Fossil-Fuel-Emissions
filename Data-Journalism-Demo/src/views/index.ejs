@@ -9,6 +9,8 @@
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
 </head>
 
 <body>
@@ -33,6 +35,26 @@
       <%}%>
     </table>
   </section>
+
+
+
+
+  <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+  <script>
+  var data = [{
+  type: "choroplethmapbox", locations: ["US"], z: [-50, -10, -20],
+  geojson: "../data/FossilFuelData.json"
+}];
+
+var layout = {mapbox: {center: {lon: -74, lat: 43}, zoom: 3.5},
+              width: 600, height:400};
+
+var config = {mapboxAccessToken: "pk.eyJ1IjoianRyYWM1MiIsImEiOiJjbGF5MW9yYWIwaXhnM3dwdTN3MXI5bGk3In0.VTcY67c_RfglndCgePKZ3w"};
+
+Plotly.newPlot('myPlot', data, layout, config);
+  </script>
+
 
   <%- include ('global/footer');  %>
 
