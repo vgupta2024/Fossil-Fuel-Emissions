@@ -27,8 +27,9 @@ for (country in country_info){
     name: country,
     data: cntry
   });
-  
+
 fs.writeFileSync('../public/'+lnk[cntries]+'.html', country_html, 'utf8');
+fs.writeFileSync('../'+lnk[cntries]+'.html', country_html, 'utf8');
 cntries +=1;
 }
 
@@ -42,6 +43,7 @@ let index_html = ejs.render(index_template, {
 
 
 fs.writeFileSync('../public/index.html', index_html, 'utf8');
+fs.writeFileSync('../index.html', index_html, 'utf8');
 
 let about_html = ejs.render(about_template, {
   filename: __dirname + '/views/about.ejs',
