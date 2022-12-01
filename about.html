@@ -2,7 +2,76 @@
 <html>
 
 <head>
-  <%- include ('global/header', {data: data});  %>
+  
+  <meta charset="utf-8" />
+  <title>Fossil Fuel Emissions</title>
+  <meta name="author" content="You">
+  <meta name="description" content="Fossil Fuel emissions">
+  <meta content="text/html" http-equiv="Content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="styles.css">
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fossil Fuel Emission By Country in 2014</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Countries
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            
+              <li><a class="dropdown-item" href="BRAZIL.html">BRAZIL </a></li>
+              
+              <li><a class="dropdown-item" href="CHINA_MAINLAND.html">CHINA (MAINLAND) </a></li>
+              
+              <li><a class="dropdown-item" href="GERMANY.html">GERMANY </a></li>
+              
+              <li><a class="dropdown-item" href="INDIA.html">INDIA </a></li>
+              
+              <li><a class="dropdown-item" href="INDONESIA.html">INDONESIA </a></li>
+              
+              <li><a class="dropdown-item" href="ISLAMIC_REPUBLIC_OF_IRAN.html">ISLAMIC REPUBLIC OF IRAN </a></li>
+              
+              <li><a class="dropdown-item" href="JAPAN.html">JAPAN </a></li>
+              
+              <li><a class="dropdown-item" href="REPUBLIC_OF_KOREA.html">REPUBLIC OF KOREA </a></li>
+              
+              <li><a class="dropdown-item" href="RUSSIAN_FEDERATION.html">RUSSIAN FEDERATION </a></li>
+              
+              <li><a class="dropdown-item" href="UNITED_STATES_OF_AMERICA.html">UNITED STATES OF AMERICA </a></li>
+              
+            </ul>
+
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              About Page
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home Page
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
 </head>
 
 
@@ -38,15 +107,15 @@
 </table>
 
 <h3>Our Designs</h3>
-<img src="Varun_Design_Macro.jpg" alt="Varun's Design Front"
+<img src="../Varun_Design_Macro.jpg" alt="Varun's Design Front"
   width="200"
   height="250"
   class="rounded">
-<img src="Varun_Design_Micro.jpg" alt="Varun's Design Back"
+<img src="../Varun_Design_Micro.jpg" alt="Varun's Design Back"
   width="200"
   height="250"
   class="rounded">
-<img src="James_Design.jpg" alt="James's Design"
+<img src="../James_Design.jpg" alt="James's Design"
   width="200"
   height="250"
   class="rounded">
@@ -65,7 +134,7 @@
 <p> Both: Worked on the ejs files for each country and the index ejs file. Also worked on aking sure the navbar worked properly for each ejs page. All other components of the project were also worked on by both partners.</p>
 
 <h4> Project Pipeline </h4>
-<img src="pipeline.jpg" alt="pipeline"
+<img src="../pipeline.jpg" alt="pipeline"
   width="1200"
   height="300"
   class="rounded">
@@ -75,7 +144,10 @@
 <p>Step 4: Our website is created and it can be viewed through a browser</p>
 
 
-<%- include ('global/footer');  %>
+<footer>
+  This is my awesome, dynamically inserted footer! Data from <a href="https://pkgstore.datahub.io/core/co2-fossil-by-nation/fossil-fuel-co2-emissions-by-nation_csv/data/0f04181960a0a896ebaf6d8afb0b71a6/fossil-fuel-co2-emissions-by-nation_csv.csv"> Fossil Fuel Emission By Country</a>
+</footer>
+
 
 </body>
 
