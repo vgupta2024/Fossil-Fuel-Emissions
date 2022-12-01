@@ -17,20 +17,29 @@
     <h1>Countries</h1>
   </header>
   <section id="country-table">
-    <table>
-      <tr>
-        <th>Country</th>
-        <th>Year</th>
-        <th>Total Fossil Fuel Emission (Metric Tons of Carbon)</th>
-      </tr>
-      <% for(country in data){ %>
-      <tr>
-        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
-        <td><%= data[country].Year %></td>
-        <td><%= data[country].TotalFossilFuelEmission %></td>
-      </tr>
-      <%}%>
-    </table>
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Country</th>
+      <th scope="col">Year</th>
+      <th scope="col">Total Fossil Fuel Emission (Metric Tons of Carbon)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let x = 0; %>
+  <% for(country in data){ %>
+    <%  x++; %>
+    <tr>
+      <th scope="row"><%=x%></th>
+      <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
+      <td><%= data[country].Year %></td>
+      <td><%= data[country].TotalFossilFuelEmission %></td>
+    </tr>
+    <%}%>
+  </tbody>
+</table>
   </section>
 
 
