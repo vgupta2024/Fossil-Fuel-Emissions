@@ -8,13 +8,13 @@
 <body>
   <span class="border border-3"></span>
   <div class="p-4">
-
   <header>
     <h1><%=name%></h1>
   </header>
   <section id="charcter-stats">
   <h2>Stats</h2>
   <ul>
+
     <li>Total Fossil Fuel Emission: <%=stats.TotalFossilFuelEmission%> Metric Tons of Carbon</li>
     <li>Solid Fuel: <%=stats.SolidFuelEmission%> Metric Tons of Carbon</li>
     <li>Gas Fuel: <%=stats.GasFuelEmission%> Metric Tons of Carbon</li>
@@ -24,11 +24,13 @@
 
 <div id="myPlot" style="width:100%;max-width:700px"></div>
 
+
 <script>
+
   var data = [
   {
-    x: ["Solid Fuel Emission", "Gas Fuel Emission", "Liquid Fuel Emission"],
-    y: [<%=stats.SolidFuelEmission%>, <%=stats.GasFuelEmission%>, <%=stats.LiquidFuelEmission%>],
+    x: ["Total Fuel Emission (Between all 10 Countries)", "<%=name%>'s Total Emission", "Solid Fuel Emission", "Gas Fuel Emission", "Liquid Fuel Emission"],
+    y: [6450636, <%=stats.TotalFossilFuelEmission%>, <%=stats.SolidFuelEmission%>, <%=stats.GasFuelEmission%>, <%=stats.LiquidFuelEmission%>],
     type: "bar"
   }
 ];
