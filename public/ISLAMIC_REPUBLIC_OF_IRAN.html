@@ -83,12 +83,13 @@
   <section id="charcter-stats">
   <h2>Stats</h2>
   <ul>
-
+    
     <li>Total Fossil Fuel Emission: 177115 Metric Tons of Carbon</li>
     <li>Solid Fuel: 900 Metric Tons of Carbon</li>
     <li>Gas Fuel: 91127 Metric Tons of Carbon</li>
     <li>Liquid Fuel: 66662 Metric Tons of Carbon</li>
-  </ul>
+    <li>Percentage of Total Fossil Fuel Emissions of top 10 countries: 2.75%</li>
+    <li>This percentage helps to show how this particular country is handling fossil fuel emissions compared to other large fossil fuel emission contributers</li>
   </section>
 
 <div id="myPlot" style="width:100%;max-width:700px"></div>
@@ -98,8 +99,8 @@
 
   var data = [
   {
-    x: ["Total Fuel Emission (Between all 10 Countries)", "ISLAMIC REPUBLIC OF IRAN's Total Emission", "Solid Fuel Emission", "Gas Fuel Emission", "Liquid Fuel Emission"],
-    y: [6450636, 177115, 900, 91127, 66662],
+    x: ["Total Emissions", "Solid Fuel Emissions", "Gas Fuel Emissions", "Liquid Fuel Emissions"],
+    y: [177115, 900, 91127, 66662],
     type: "bar"
   }
 ];
@@ -122,7 +123,7 @@ Plotly.newPlot('myPlot', data, layout);
 </script>
 
   <footer>
-  Our data is from <a href="https://pkgstore.datahub.io/core/co2-fossil-by-nation/fossil-fuel-co2-emissions-by-nation_csv/data/0f04181960a0a896ebaf6d8afb0b71a6/fossil-fuel-co2-emissions-by-nation_csv.csv"> Fossil Fuel Emission By Country</a>
+  We used the following data to examine fossil fuel emissions on Earth: <a href="https://pkgstore.datahub.io/core/co2-fossil-by-nation/fossil-fuel-co2-emissions-by-nation_csv/data/0f04181960a0a896ebaf6d8afb0b71a6/fossil-fuel-co2-emissions-by-nation_csv.csv">Fossil Fuel Emission By Country</a>
 </footer>
 
 

@@ -14,12 +14,13 @@
   <section id="charcter-stats">
   <h2>Stats</h2>
   <ul>
-
+    <%let percentage = Math.round(10000*stats.TotalFossilFuelEmission/6450636)/100%>
     <li>Total Fossil Fuel Emission: <%=stats.TotalFossilFuelEmission%> Metric Tons of Carbon</li>
     <li>Solid Fuel: <%=stats.SolidFuelEmission%> Metric Tons of Carbon</li>
     <li>Gas Fuel: <%=stats.GasFuelEmission%> Metric Tons of Carbon</li>
     <li>Liquid Fuel: <%=stats.LiquidFuelEmission%> Metric Tons of Carbon</li>
-  </ul>
+    <li>Percentage of Total Fossil Fuel Emissions of top 10 countries: <%=percentage%>%</li>
+    <li>This percentage helps to show how this particular country is handling fossil fuel emissions compared to other large fossil fuel emission contributers</li>
   </section>
 
 <div id="myPlot" style="width:100%;max-width:700px"></div>
@@ -29,8 +30,8 @@
 
   var data = [
   {
-    x: ["Total Fuel Emission (Between all 10 Countries)", "<%=name%>'s Total Emission", "Solid Fuel Emission", "Gas Fuel Emission", "Liquid Fuel Emission"],
-    y: [6450636, <%=stats.TotalFossilFuelEmission%>, <%=stats.SolidFuelEmission%>, <%=stats.GasFuelEmission%>, <%=stats.LiquidFuelEmission%>],
+    x: ["Total Emissions", "Solid Fuel Emissions", "Gas Fuel Emissions", "Liquid Fuel Emissions"],
+    y: [<%=stats.TotalFossilFuelEmission%>, <%=stats.SolidFuelEmission%>, <%=stats.GasFuelEmission%>, <%=stats.LiquidFuelEmission%>],
     type: "bar"
   }
 ];
